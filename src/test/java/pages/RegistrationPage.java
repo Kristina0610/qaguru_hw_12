@@ -64,35 +64,35 @@ public class RegistrationPage {
     return this;
   }
 
-  @Step("Заполняем имя")
+  @Step("Заполняем имя - {value}")
   public RegistrationPage setFirstNameInput(String value) {
     firstNameInput.setValue(value);
 
     return this;
   }
 
-  @Step("Заполняем фамилию")
+  @Step("Заполняем фамилию - {value}")
   public RegistrationPage setLastNameInput(String value) {
     lastNameInput.setValue(value);
 
     return this;
   }
 
-  @Step("Заполняем Email")
+  @Step("Заполняем Email - {value}")
   public RegistrationPage setUserEmailInput(String value) {
     userEmailInput.setValue(value);
 
     return this;
   }
 
-  @Step("Заполняем пол")
+  @Step("Заполняем пол - {value}")
   public RegistrationPage setGender(String value) {
     gender.$(byText(value)).click();
 
     return this;
   }
 
-  @Step("Заполняем номер телефона")
+  @Step("Заполняем номер телефона - {value}")
   public RegistrationPage setNumber(String value) {
     userNumber.setValue(value);
 
@@ -100,7 +100,7 @@ public class RegistrationPage {
   }
 
 
-  @Step("Заполняем дату рождения")
+  @Step("Заполняем дату рождения - {value}")
   public RegistrationPage setBirthDate(String day, String month, String year) {
     dateOfBirthInput.click();
     calendarComponent.setDate(day, month, year);
@@ -108,35 +108,35 @@ public class RegistrationPage {
     return this;
   }
 
-  @Step("Выбираем хобби")
+  @Step("Выбираем хобби - {value}")
   public RegistrationPage setHobby(String value) {
     hobby.$(byText(value)).click();
 
     return this;
   }
 
-  @Step("Заполняем предмет")
+  @Step("Заполняем предмет - {value}")
   public RegistrationPage setSubjectInput(String value) {
     subjectInput.setValue(value).pressEnter();
 
     return this;
   }
 
-  @Step("Загружаем файл")
+  @Step("Загружаем файл - {value}")
   public RegistrationPage uploadFile() {
     fileUpload.uploadFile(new File("src/test/resources/screenshot_1.png"));
 
     return this;
   }
 
-  @Step("Заполняем адрес")
+  @Step("Заполняем адрес - {value}")
   public RegistrationPage setCurrentAddress(String value) {
     currentAddress.setValue(value);
 
     return this;
   }
 
-  @Step("Выбираем из списка штат")
+  @Step("Выбираем из списка штат {value}")
   public RegistrationPage setState(String value) {
     state.click();
     $(byText(value)).click();
@@ -159,13 +159,13 @@ public class RegistrationPage {
     return this;
   }
 
-  @Step("Проверяем, что все параметры заполнены верно")
+  @Step("Проверяем отображение модального окна")
   public RegistrationPage verifyRegistrationResultsModalAppears() {
     resultsModal.verifyModalAppears();
     return this;
   }
 
-  @Step("Проверяем отображение модального окна")
+
   public RegistrationPage verifyResult(String key, String value) {
     resultsModal.verifyResult(key, value);
 
