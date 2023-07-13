@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import pages.components.CalendarComponent;
 import pages.components.ResultsModal;
 
@@ -32,12 +33,14 @@ public class RegistrationPage {
           button = $("#submit");
 
   // Actions
+  @Step("Открываем страницу регистрации")
   public RegistrationPage openPage() {
     open("/automation-practice-form");
 
     return this;
   }
 
+  @Step("Удаляем header")
   public RegistrationPage removeHeader() {
 
     executeJavaScript("$('header').remove()");
