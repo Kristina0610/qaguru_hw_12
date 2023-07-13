@@ -100,7 +100,7 @@ public class RegistrationPage {
   }
 
 
-  @Step("Заполняем дату рождения - {value1, value2, value3} ")
+  @Step("Заполняем дату рождения - {day} {month} {year}")
   public RegistrationPage setBirthDate(String day, String month, String year) {
     dateOfBirthInput.click();
     calendarComponent.setDate(day, month, year);
