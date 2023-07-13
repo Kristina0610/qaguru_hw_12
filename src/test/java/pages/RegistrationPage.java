@@ -122,7 +122,7 @@ public class RegistrationPage {
     return this;
   }
 
-  @Step("Загружаем файл - {value}")
+  @Step("Загружаем файл - screenshot_1.png")
   public RegistrationPage uploadFile() {
     fileUpload.uploadFile(new File("src/test/resources/screenshot_1.png"));
 
@@ -165,7 +165,7 @@ public class RegistrationPage {
     return this;
   }
 
-
+  @Step("Проверяем заполнение поля {key} значением {value}")
   public RegistrationPage verifyResult(String key, String value) {
     resultsModal.verifyResult(key, value);
 
