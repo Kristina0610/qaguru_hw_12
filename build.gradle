@@ -62,8 +62,8 @@ test {
     useJUnitPlatform()
 }
 
-task simple_test(type: Test) {
+task remote_test(type: Test) {
     useJUnitPlatform {
-        includeTags("simple")
+        includeTags("remote")
     }
 }
