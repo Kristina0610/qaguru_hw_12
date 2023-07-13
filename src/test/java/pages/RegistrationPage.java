@@ -8,7 +8,6 @@ import java.io.File;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class RegistrationPage {
   // SelenideElements / locator / etc
@@ -53,6 +52,13 @@ public class RegistrationPage {
     return this;
   }
 
+  public RegistrationPage removeBanners() {
+
+    executeJavaScript("$('#fixedban').remove()");
+
+    return this;
+  }
+
   public RegistrationPage setFirstNameInput(String value) {
     firstNameInput.setValue(value);
 
@@ -86,7 +92,7 @@ public class RegistrationPage {
 
   public RegistrationPage setBirthDate(String day, String month, String year) {
     dateOfBirthInput.click();
-    calendarComponent.setDate(day,month,year);
+    calendarComponent.setDate(day, month, year);
 
     return this;
   }

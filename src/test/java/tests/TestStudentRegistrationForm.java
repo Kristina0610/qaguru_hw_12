@@ -32,6 +32,7 @@ public class TestStudentRegistrationForm extends TestBase {
     registrationPage.openPage()
             .removeHeader()
             .removeFooter()
+            .removeBanners()
             .setFirstNameInput(firstName)
             .setLastNameInput(lastName)
             .setUserEmailInput(userEmail)
